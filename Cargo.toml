@@ -1,0 +1,8 @@
+[package]
+name = "server"
+version = "0.0.1"
+authors = ["Hiroshi Yoshida <hrysd22@gmail.com>"]
+
+[dependencies]
+hyper = "0.4.0"
+rand = "0.3"
