@@ -4,6 +4,7 @@ RUN useradd -d /app -m app
 
 WORKDIR /app
 
+ENV PORT 3000
 ENV SHELL /bin/sh
 
 RUN curl -s https://static.rust-lang.org/rustup.sh | sh -s -- --disable-sudo --channel=nightly -y
@@ -22,4 +23,4 @@ WORKDIR /app/src
 ONBUILD RUN cargo fetch --verbose
 ONBUILD RUN cargo build --release
 
-ONBUILD EXPOSE 8080
+ONBUILD EXPOSE 3000
